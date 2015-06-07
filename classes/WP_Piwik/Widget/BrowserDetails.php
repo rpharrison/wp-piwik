@@ -14,7 +14,7 @@
 				'date'  => $timeSettings['date']
 			);
 			$this->title = $prefix.__('Browser Details', 'wp-piwik').' ('.__($timeSettings['description'],'wp-piwik').')';
-			$this->method = 'UserSettings.getBrowserVersion';
+			$this->method = 'DevicesDetection.getBrowserVersions';
 			$this->context = 'normal';
 			wp_enqueue_script('wp-piwik', self::$wpPiwik->getPluginURL().'js/wp-piwik.js', array(), self::$wpPiwik->getPluginVersion(), true);
 			wp_enqueue_script('wp-piwik-jqplot',self::$wpPiwik->getPluginURL().'js/jqplot/wp-piwik.jqplot.js',array('jquery'));
